@@ -1,0 +1,77 @@
+{
+  "_comment": "Registro de juegos ya resueltos. type=service exige arte de temporada vigente en la fecha del directo; type=fixed usa cover perenne. Rellenar al resolver un juego nuevo para no repetir la busqueda.",
+  "games": [
+    {
+      "name": "Marvel Rivals",
+      "type": "service",
+      "steam_appid": 2767030,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2767030/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/2767030/logo.png",
+      "season_art": "https://cdn.cloudflare.steamstatic.com/steam/apps/2767030/library_hero_2x.jpg",
+      "notes": "El hero 3840x1240 sirve para el hueco vertical de portada partida: el heroe de temporada queda centrado."
+    },
+    {
+      "name": "Overwatch",
+      "type": "service",
+      "steam_appid": 2357570,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2357570/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/2357570/logo.png",
+      "season_art": "og:image del articulo de la season en overwatch.blizzard.com/news/",
+      "notes": "Excepcion: solo season, nunca evento, y con personaje. Ver asset-sources.md. Numeracion continua entre temporadas: S1 #01-#06, S2 #07, luego #08, #09..."
+    },
+    {
+      "name": "GTA Online",
+      "type": "service",
+      "steam_appid": 271590,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/logo.png",
+      "season_art": "API de noticias de Steam del appid 271590; buscar el post del evento mas cercano a la fecha del directo",
+      "notes": "Los eventos cambian cada semana o dos. El arte del evento suele publicarse el mismo dia que empieza."
+    },
+    {
+      "name": "Gears 5",
+      "type": "fixed",
+      "steam_appid": 1097840,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1097840/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/1097840/logo.png"
+    },
+    {
+      "name": "R.E.P.O.",
+      "type": "fixed",
+      "steam_appid": 3241660,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3241660/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/3241660/logo.png"
+    },
+    {
+      "name": "Barony",
+      "type": "fixed",
+      "steam_appid": 371970,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/371970/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/371970/logo.png"
+    },
+    {
+      "name": "Super Smash Bros. Melee",
+      "type": "fixed",
+      "steam_appid": null,
+      "cover": "https://mario.wiki.gallery/images/8/8c/Box_Artwork_-_Super_Smash_Bros._Melee.jpg",
+      "logo": "https://mario.wiki.gallery/images/d/d9/SSBM.png",
+      "notes": "El logo trae un fondo palido pegado detras de 'Melee'. Pendiente de sustituir por uno limpio."
+    },
+    {
+      "name": "Super Smash Bros. Ultimate",
+      "type": "fixed",
+      "steam_appid": null,
+      "cover": "https://mario.wiki.gallery/images/a/a0/SSBU_EU_Boxart.png",
+      "logo": "https://mario.wiki.gallery/images/3/35/Super_Smash_Bros._Ultimate_logo.png",
+      "notes": "Logo en version oscura: sobre fondo negro pierde contraste. Funciona si la caja respeta su ratio 2.55:1 y es grande."
+    },
+    {
+      "name": "Pokemon Legends Z-A",
+      "type": "fixed",
+      "steam_appid": null,
+      "cover": "https://archives.bulbagarden.net/media/upload/6/65/Legends_Z-A_boxart_illustration.jpg",
+      "logo": null,
+      "notes": "bulbagarden sirve las imagenes sin /thumb/ en la ruta. Con /thumb/ da 403."
+    }
+  ]
+}

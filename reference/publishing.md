@@ -23,8 +23,12 @@ buscar un gemelo que no existe.
 
 ## 1. Titulo
 
+- **Si la serie tiene episodios, el titulo acaba en `| JUEGO #N`.** Pedido por el usuario el
+  2026-11-22. Va al final, detras del titulo que el escribio, con el mismo `#N` que la portada:
+  `🌴 GTA VI y Saliendo del Rancho🕺🏎️ | GTA VI #2`. Se repite el nombre del juego aunque ya
+  aparezca al principio del titulo: lo que identifica la serie es el bloque final entero.
 - Empieza por el **juego**, no por el chiste (`ctr.md`). El chiste va detras.
-- Mix: termina en `| MIX SESSIONS #N`.
+- Mix: termina en `| MIX SESSIONS #N`, misma regla.
 - El `#N` **no se saca del titulo de YouTube**, que falla: dos directos distintos llegaron a
   llamarse los dos `MIX SESSIONS #10`. Manda la cuenta de las portadas anteriores.
 - Editar: hay dos `div#textbox` en la pagina; el primero es el titulo y el segundo la
@@ -145,7 +149,8 @@ restriccion de edad: se quedan como estan salvo que el usuario lo pida.
 ## Checklist
 
 - [ ] Es la entrada **horizontal** (la vertical, a privado)
-- [ ] Titulo empieza por el juego y el `#N` cuadra con las portadas anteriores
+- [ ] Titulo empieza por el juego y **acaba en `| JUEGO #N`** si la serie tiene episodios, con
+      el mismo numero que la portada
 - [ ] Portada a sangre **aprobada por el usuario** y subida (JPG 1920x1080)
 - [ ] Descripcion con capitulos en `H:MM:SS`, minimo tres, el primero `0:00`
 - [ ] Etiquetas

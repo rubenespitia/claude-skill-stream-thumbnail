@@ -85,7 +85,9 @@ encima. Si el arte candidato no cumple las dos, seguir buscando antes que confor
   explicitamente.
 - **Juego cerrado** (Pokemon, Smash, Barony, R.E.P.O.…): cover perenne, no cambia.
 - **Portada y titulo son pareja**: la portada abre la curiosidad, el titulo la cierra, y no
-  repiten lo mismo. El titulo empieza por el juego, no por el chiste. La portada lleva 2-3
+  repiten lo mismo. El titulo empieza por el juego, no por el chiste, y **si la serie tiene
+  episodios acaba en `| JUEGO #N`** con el mismo numero que lleva impreso la portada
+  (`… | GTA VI #2`, `… | MIX SESSIONS #11`). La portada lleva 2-3
   palabras de gancho bajo el logo. El `#N` se queda. Medido: los VOD de directo rinden 0,35% de
   CTR contra 2,18% de los videos editados. Ver `reference/ctr.md`.
 - Recortar el titulo del juego al encuadrar **se permite**: en el formato a sangre, tanto de un

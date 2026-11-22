@@ -117,6 +117,26 @@ Para probar algo en el formulario y dejarlo como estaba, el boton **"Deshacer ca
 todo lo pendiente. Mejor que recargar, que puede lanzar un dialogo nativo de "¿salir del sitio?"
 y bloquear la sesion del navegador.
 
+## 8. Archivar
+
+Las portadas y los `.txt` que se dan por buenos se guardan en:
+
+```
+C:\Users\ruben\OneDrive\Imágenes\THUMBNAILS\STREAMS\AAAA_MM_DD\
+```
+
+La carpeta lleva la **fecha de la sesion de trabajo**, no la del directo; dentro pueden convivir
+varios directos. Los archivos conservan la **fecha de su propio directo** en el nombre, con la
+convencion de siempre:
+
+```
+STREAM_AAAA_MM_DD_JUEGO[_FULLBLEED].jpg|png
+DESC_AAAA_MM_DD_JUEGO.txt
+```
+
+Se archiva **solo la version final**, con nombre limpio: nada de `_v9` ni `_1920`. Las
+intermedias se quedan en Descargas.
+
 ## Lo que no se toca
 
 Remixes en Shorts, comentarios y puntuaciones, publico (contenido para niños), licencia,
@@ -132,3 +152,4 @@ restriccion de edad: se quedan como estan salvo que el usuario lo pida.
 - [ ] Categoria `Videojuegos` + titulo del juego elegido de la lista
 - [ ] Lista de reproduccion del año en curso
 - [ ] Guardado y **verificado recargando** la pagina de detalles
+- [ ] Portada y `.txt` archivados en `THUMBNAILS\STREAMS\AAAA_MM_DD\`

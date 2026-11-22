@@ -167,6 +167,10 @@ capitulos, etiquetas, categoria `Videojuegos` + titulo del juego, y la lista de 
 año en curso**. El paso a paso, con los selectores de Studio y las trampas de cada campo, esta
 en `reference/publishing.md`.
 
+Cuando el VOD queda publicado, la portada final y su `.txt` se archivan en
+`OneDrive\Imágenes\THUMBNAILS\STREAMS\AAAA_MM_DD\` (carpeta con la fecha de la sesion, archivos
+con la fecha de su directo). Detalle en `reference/publishing.md`.
+
 Dos cosas que conviene saber antes de empezar:
 
 - El campo **"Titulo del juego (opcional)"** vive bajo *Mostrar mas* → *Categoria*, es un

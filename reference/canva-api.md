@@ -3,18 +3,30 @@
 ## Secuencia minima
 
 ```
-copy-design(design_id, page_numbers=[N])          -> nuevo design_id
-start-editing-transaction(design_id)              -> transaction_id, page_id, element_ids
-perform-editing-operations(transaction_id, ops)   -> borrador, devuelve thumbnail
-commit-editing-transaction(transaction_id)        -> guarda
-export-design(design_id, png 1280x720)            -> URL temporal
+copy-design(design_id, page_numbers=[N])                      -> nuevo design_id
+read-design(design_id, open_transaction=true)                 -> transaction_id, page_id, elements
+edit-design(transaction_id, page_index, ops, "keep_open")     -> borrador, devuelve thumbnail
+edit-design(transaction_id, "commit")                         -> guarda
+export-design(design_id, png 1280x720)                        -> URL temporal
 ```
 
-`cancel-editing-transaction` descarta. Sin commit **se pierde todo**, aunque las operaciones
-hayan devuelto `success`.
+`finalize: "cancel"` descarta. Sin commit **se pierde todo**, aunque las operaciones hayan
+devuelto `applied_unverified`.
 
-Se puede leer el estado de un diseño abriendo una transaccion y cancelandola: es la unica forma
-de ver geometria de elementos, porque `get-design-content` solo devuelve texto.
+`commit` y `cancel` no admiten operaciones en la misma llamada: hay que mandarlas antes con
+`keep_open`.
+
+**La transaccion caduca.** Con ~25 min entre el `read-design` y el `commit` la llamada falla con
+`Editing transaction <id> not found` y se pierde todo el trabajo. Abrir y cerrar de una tacada:
+nada de muestrear frames, buscar arte o descargar entre medias. Si hay que investigar, antes.
+
+Para ver geometria de elementos hace falta `open_transaction: true`; un `read-design` normal
+solo devuelve el texto. No pasar `filter.element_ids: []`, que filtra todo y deja la lista de
+elementos vacia; con un sufijo de verdad (`["LBRNkqfYCvW8xyd5"]`) si filtra bien, y es la forma
+barata de sacar el `page_id` de una copia sin tragarse el documento entero.
+
+Los sufijos de `element_id` son los mismos en toda copia de la misma pagina, asi que basta con
+componer `{page_id}-{sufijo}` y no hace falta releer los elementos de cada copia.
 
 ## Operaciones utiles
 
@@ -29,6 +41,19 @@ de ver geometria de elementos, porque `get-design-content` solo devuelve texto.
 
 La distincion entre `resize_element` e `insert_fill` es la trampa principal. Para que una imagen
 se vea entera a otro tamaño: borrar e insertar.
+
+Lo que entra con `insert_fill` o `insert_shape` **aparece delante de todo**. Un fondo a pagina
+completa necesita siempre un `layer_element` con `position: "back"` despues, y como el
+locator_id solo llega en la respuesta, son dos llamadas.
+
+`update_stroke_properties` sobre los elementos `line` de la plantilla devuelve
+`internal_error`. Para cambiarles el color funciona `recolor_element`, que tambien sirve en los
+rect con mapa de `recoloring` (flechas, panel de rayas diagonales).
+
+`update_fill` **hereda el recorte que el humano dejo puesto en ese hueco**. Si la portada de la
+que se copia fue reencuadrada a mano, el asset nuevo entra con ese mismo zoom y sale cortado
+aunque el ratio de la caja coincida con el del PNG. Se vio con el logo de Overwatch, que quedo
+como "VERWATCH" sin el "2". En logos, `delete_element` + `insert_fill` en vez de `update_fill`.
 
 ## Brand templates
 

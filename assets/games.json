@@ -16,8 +16,10 @@
       "steam_appid": 2357570,
       "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2357570/library_600x900_2x.jpg",
       "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/2357570/logo.png",
-      "season_art": "og:image del articulo de la season en overwatch.blizzard.com/news/",
-      "notes": "Excepcion: solo season, nunca evento, y con personaje. Ver asset-sources.md. Numeracion continua entre temporadas: S1 #01-#06, S2 #07, luego #08, #09..."
+      "season_art": "og:image del articulo de la season en overwatch.blizzard.com/news/. S4 Heroes of Busan (11-08-2026 a 05-10-2026): https://bnetcmsus-a.akamaihd.net/cms/blog_header/vb/VBKOQ25DZB6A1785973650531.png (1520x540). S5 A Grim Doctrine (desde 06-10-2026): https://bnetcmsus-a.akamaihd.net/cms/blog_header/m9/M97AU0J4VPW51790795209606.png (1520x540)",
+      "band_art": "S5 A Grim Doctrine: https://images.weserv.nl/?url=bnetcmsus-a.akamaihd.net/cms/blog_header/m9/M97AU0J4VPW51790795209606.png&w=1232&h=603&fit=cover&a=focal&fpx=0.75&fpy=0.45&output=jpg",
+      "fullbleed_panel": "https://images.weserv.nl/?url=bnetcmsus-a.akamaihd.net/cms/blog_header/m9/M97AU0J4VPW51790795209606.png&precrop=true&cx=960&cy=0&cw=300&ch=540&w=400&h=720&output=jpg",
+      "notes": "Excepcion: solo season, nunca evento, y con personaje. Ver asset-sources.md. RESOLUCION: el unico key art limpio de season es el blog_header 1520x540, asi que un panel vertical a sangre (400x720) sale de 300x540 y se amplia 1.33x. No hay mejor y esta comprobado: /cms/ solo responde en blog_header (blog_thumbnail, content_entry_media, gallery y original dan 404); la galeria del articulo de season llega a 2036x1146 pero son infografias de habilidades e ilustraciones de skins, no el key art; el SuperHeroArt 3840x2160 y el Poster del catalogo de Xbox (bigId 9N424JWWCWB7) son arte de bundle con iconos de tienda; library_hero_2x es 3840x1240 pero trae evento de Halloween con D.Va, no season. Si alguna vez hace falta nitidez perfecta en vertical, lo unico que la da es library_600x900_2x (1200x1800, ratio 0.667 exacto), pero es cover perenne y rompe la regla de season. Numeracion de portadas sueltas: 2026-07-22 #8, 2026-07-28 #9, 2026-09-30 #10. El logo.png de Steam es 640x360 (ratio 1.78) y trae 'OVERWATCH 2' con el 2 pegado al borde derecho: cualquier recorte se lo come. El header de season es 1520x540 y el hueco de cover es ratio 1.02: pasar por weserv antes de subir. S4: &w=552&h=540&fit=cover&a=focal&fpx=0.487&fpy=0.5 deja a D.Mon centrada con D.Va y los MEKA detras."
     },
     {
       "name": "GTA Online",
@@ -50,6 +52,34 @@
       "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/371970/logo.png"
     },
     {
+      "name": "Machine Party",
+      "type": "fixed",
+      "steam_appid": 4108000,
+      "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4108000/00ae7d0e0fd0ad72635bddb1dd80ee68cc94eed5/header_2x.jpg",
+      "logo": null,
+      "band_art": "https://images.weserv.nl/?url=shared.fastly.steamstatic.com/store_item_assets/steam/apps/4108000/00ae7d0e0fd0ad72635bddb1dd80ee68cc94eed5/header_2x.jpg&w=1232&h=603&fit=cover&a=focal&fpx=0.5&fpy=0.5&output=jpg",
+      "notes": "Salio el 30-07-2026 y usa el CDN nuevo con hash: las rutas clasicas cdn.cloudflare.steamstatic.com/steam/apps/<appid>/ dan 404. No hay library_600x900 ni logo.png. En la ruta con hash SI existe header_2x.jpg (920x430), el doble que el header.jpg 460x215 que se uso al principio; capsule_616x353 da 404 ahi. Ratio 2.14 contra 2.04 de banda: el recorte centrado casi no toca nada y el titulo impreso aguanta, asi que la banda no lleva logo."
+    },
+    {
+      "name": "Dead by Daylight",
+      "type": "service",
+      "steam_appid": 381210,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/381210/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/381210/logo.png",
+      "season_art": "https://cdn.cloudflare.steamstatic.com/steam/apps/381210/library_hero_2x.jpg",
+      "band_art": "https://images.weserv.nl/?url=cdn.cloudflare.steamstatic.com/steam/apps/381210/capsule_616x353.jpg&w=1232&h=603&fit=cover&a=focal&fpx=0.5&fpy=0.45&output=jpg",
+      "notes": "Es de servicio pero su library_hero_2x es el arte del capitulo vigente y tiene el centro vacio: en banda 2.04 se queda en fondo rojo liso sin personaje. El capsule_616x353 es la opcion buena para banda, lleva killers arriba, survivors abajo y el titulo impreso, asi que no necesita logo. fpy 0.45 sube la ventana para no cortar las cabezas de los killers. Logo 640x360 limpio si hace falta en portada de un solo juego."
+    },
+    {
+      "name": "Gears of War: E-Day",
+      "type": "fixed",
+      "steam_appid": 3010850,
+      "cover": "https://images.weserv.nl/?url=store-images.s-microsoft.com/image/apps.26062.13978914104035031.46ab30c4-87b3-48d6-9e4a-ed44b301b17a.ee5e2985-e76f-4e1c-b2ae-0867544ab5c1&precrop=true&cx=430&cy=680&cw=1480&ch=1450&w=1120&h=1097&fit=cover&output=jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/3010850/logo.png",
+      "band_art": "https://images.weserv.nl/?url=store-images.s-microsoft.com/image/apps.7129.13978914104035031.46ab30c4-87b3-48d6-9e4a-ed44b301b17a.c6a61057-524a-4b26-a462-7cb77482c68f&w=1232&h=603&fit=cover&a=focal&fpx=0.5&fpy=0.45&output=jpg",
+      "notes": "Salio el 06-10-2026. El TitledHeroArt 1920x1080 del catalogo de Xbox es la mejor opcion para banda: Marcus y Dom de cuerpo entero, el titulo impreso a la izquierda y el craneo rojo abajo, asi que la banda no lleva logo. Evento de Halloween 20-27 oct 2026 (Versus Trick-or-Treat y Horde Siege contra el Coco): no hay key art oficial publico con personaje, la noticia de gearsofwar.com solo trae la placa 'OCTOBER 22 HOTFIX' sin nadie en cuadro, y el catalogo de Xbox no se actualiza por evento. Todo el arte de Steam (library_600x900_2x, library_hero_2x, capsule) es negro liso con el logo encima: sin personaje, no cumple la regla. El BoxArt 2160x2160 del catalogo de Xbox si trae a Marcus y Dom; se saca de displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9N4PT8HGCDHQ&market=US&languages=en-us, que lista BoxArt, Poster y SuperHeroArt. El precrop de weserv deja las caras grandes y saca de cuadro el titulo impreso, que ya va en la caja de logo. El logo.png de Steam si es util: 640x360 transparente y limpio."
+    },
+    {
       "name": "Super Smash Bros. Melee",
       "type": "fixed",
       "steam_appid": null,
@@ -64,6 +94,106 @@
       "cover": "https://mario.wiki.gallery/images/a/a0/SSBU_EU_Boxart.png",
       "logo": "https://mario.wiki.gallery/images/3/35/Super_Smash_Bros._Ultimate_logo.png",
       "notes": "Logo en version oscura: sobre fondo negro pierde contraste. Funciona si la caja respeta su ratio 2.55:1 y es grande."
+    },
+    {
+      "name": "Helldivers 2",
+      "type": "service",
+      "steam_appid": 553850,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/553850/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/553850/logo.png",
+      "season_art": "https://cdn.cloudflare.steamstatic.com/steam/apps/553850/library_hero_2x.jpg",
+      "notes": "Logo 640x360 con padding, ratio de caja 1.78. En portada partida en vertical (ratio 0.51) el arte de warbond no entra: usar library_600x900."
+    },
+    {
+      "name": "Rocket League",
+      "type": "service",
+      "steam_appid": 252950,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/252950/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/252950/logo.png",
+      "season_art": "https://cdn.cloudflare.steamstatic.com/steam/apps/252950/library_hero_2x.jpg",
+      "notes": "Logo 640x360 con padding, ratio de caja 1.78. Steam ya no actualiza el arte por temporada; el cover perenne sirve."
+    },
+    {
+      "name": "Monster Hunter Wilds",
+      "type": "fixed",
+      "steam_appid": 2246340,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2246340/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/2246340/logo.png",
+      "season_art": "https://cdn.cloudflare.steamstatic.com/steam/apps/2246340/library_hero_2x.jpg",
+      "notes": "Logo 640x360, ratio 1.78: entra tal cual en la caja de 247.9x139.4 de banda superior. El titulo del directo no dice cual de los Monster Hunter es y los subtitulos tampoco: nombran World y Rise de pasada, y Wilds ni una vez. Preguntar."
+    },
+    {
+      "name": "Street Fighter 6",
+      "type": "fixed",
+      "steam_appid": 1364780,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1364780/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/1364780/logo.png",
+      "season_art": "https://cdn.cloudflare.steamstatic.com/steam/apps/1364780/library_hero_2x.jpg",
+      "notes": "Logo 640x126, ratio 5.08: la caja de 247.9x139.4 de portada mix no vale. Usado 340x66.9 en (75, 48) sobre la banda superior."
+    },
+    {
+      "name": "Star Fox (2026)",
+      "type": "fixed",
+      "steam_appid": null,
+      "cover": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch2/70010000123167/53252d090153a002caa2cd44e8d16cd5d8e138a71fdee7c2b11533cc4eea0780",
+      "logo": null,
+      "band_art": "https://images.weserv.nl/?url=assets.nintendo.com/image/upload/c_fill%2Cw_1200/q_auto:best/f_jpg/dpr_2.0/store/software/switch2/70010000123167/53252d090153a002caa2cd44e8d16cd5d8e138a71fdee7c2b11533cc4eea0780&w=1681&h=548&fit=cover&a=focal&fpx=0.5&fpy=0.62",
+      "notes": "Remake de Star Fox 64 de Velan Studios, Switch 2, 25-06-2026. El og:image de la ficha de nintendo.com es 2400x1350 y trae el titulo impreso abajo a la izquierda: no hace falta logo. No hay logo transparente publico (Arwingpedia solo tiene logos de entregas viejas). fpy 0.62 es el compromiso: titulo entero y el equipo visible; mas bajo corta los ojos de Fox, mas alto corta el logo."
+    },
+    {
+      "name": "PEAK",
+      "type": "fixed",
+      "steam_appid": 3527290,
+      "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3527290/c6791f0f1b7b29f6304e283ac7a2cabc27c7eb0d/capsule_616x353.jpg",
+      "logo": null,
+      "band_art": "https://images.weserv.nl/?url=shared.fastly.steamstatic.com/store_item_assets/steam/apps/3527290/c6791f0f1b7b29f6304e283ac7a2cabc27c7eb0d/capsule_616x353.jpg&w=1232&h=402&fit=cover&a=focal&fpx=0.5&fpy=0.37",
+      "notes": "CDN nuevo con hash: library_600x900_2x, logo.png y library_logo.png dan 404 en todas las rutas. library_hero_2x SI existe (3840x1240) pero viene sin titulo y no hay logo transparente publico (ni press kit de Landfall, que solo publica PEAK_KeyArt_No_Logo.png, ni wikis). Por eso la banda usa el capsule 616x353 recortado."
+    },
+    {
+      "name": "Buckshot Roulette",
+      "type": "fixed",
+      "steam_appid": 2835570,
+      "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2835570/library_600x900_2x.jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/2835570/logo.png",
+      "band_art": "https://images.weserv.nl/?url=cdn.cloudflare.steamstatic.com/steam/apps/2835570/capsule_616x353.jpg&w=1232&h=402&fit=cover&a=focal&fpx=0.5&fpy=0.40",
+      "notes": "Mismo autor que Machine Party (Mike Klubnika) pero este si tiene las rutas clasicas de Steam. El capsule lleva el titulo a la derecha; con el recorte centrado de Canva se corta la fila de arriba de 'BUCKSHOT', asi que la banda usa el recorte con fpy 0.40."
+    },
+    {
+      "name": "Fortnite",
+      "type": "service",
+      "steam_appid": null,
+      "cover": null,
+      "logo": "https://cdn2.unrealengine.com/24br-s24-egs-launcher-logo-350x100-350x100-b63249f937d9.png",
+      "season_art": "fortnite-api.com/v2/news da titulo + imagen de cada noticia; las imagenes viven en cdn-live.prm.ol.epicgames.com y aceptan ?width=&height=&aspect=fill, que recorta al ratio pedido sin pasar por weserv. Fortnitemares 2026 (vigente 01-10-2026): https://cdn-live.prm.ol.epicgames.com/prod/71f69967b38e4a4dbd3c5d6c7004dbea.jpeg?width=1232&height=603&aspect=fill",
+      "notes": "No esta en Steam. El catalogo de la tienda de Epic (store-content-ipv4.ak.epicgames.com/api/en-US/content/products/fortnite) lista los PNG de logo; el limpio de 'FORTNITE' en blanco es 24br-s24-egs-launcher-logo 350x100, ratio 3.5 (el que se llama en-og-logo-egs-logo es el de FORTNITE OG, no sirve). El key art de Fortnitemares no trae titulo impreso, asi que la banda lleva logo: 290x83 en (85, 356) sobre la banda inferior."
+    },
+    {
+      "name": "The Legend of Zelda: Ocarina of Time (2026)",
+      "type": "fixed",
+      "steam_appid": null,
+      "cover": "https://images.weserv.nl/?url=assets.nintendo.com/image/upload/c_fill%2Cw_1200/q_auto:best/f_jpg/dpr_2.0/store/software/switch2/70010000130792/21d17919819cffebda2817f9b0110116c28568e0b6fa30a9778f1679271be809&precrop=true&cx=180&cy=250&cw=1020&ch=1000&w=1020&h=1000&fit=cover&output=jpg",
+      "logo": "https://assets.nintendo.com/image/upload/f_png/Marketing2/DNDPqUcrg1784158469aaH8EIiMcjzbYSlnG0ncVJW3rSzR35s0l1pKOdPLJAm2y/section_overview/game-logo.png",
+      "fullbleed_art": "https://assets.nintendo.com/image/upload/f_jpg/Marketing2/DNDPqUcrg1784158469aaH8EIiMcjzbYSlnG0ncVJW3rSzR35s0l1pKOdPLJAm2y/section_overview/game-keyart-large-up.jpg",
+      "notes": "PORTADA A SANGRE: el og:image lleva el titulo impreso a la derecha y no sirve. El bueno es game-keyart-large-up.jpg 2880x1600 de la ruta Marketing2/.../section_overview/, limpio y sin titulo, con Link a la izquierda: la columna oscura va a la DERECHA. Remake de Grezzo/Nintendo para Switch 2, 05-11-2026. Serie COMPLETA en 3 directos: #1 05-11-2026 (87vLBELXrBM), #2 10-11-2026 (BPP19ZeKkqA), #3 y final 16-11-2026 (RxU-VHMg-G0). El og:image de la ficha de nintendo.com es 2400x1350 con Link a la izquierda y el logo a la derecha: el precrop deja a Link solo y saca el titulo de cuadro, que ya va en la caja de logo. La ruta Marketing2/.../section_overview/ de la ficha trae game-logo.png 1052x786 transparente y limpio, ratio 1.34: la caja de 510x286.9 de la portada de un solo juego no vale. Usado 460x343.7 en (725, 178), y el #N baja de y=414 a y=532 porque el logo llena su caja sin padding."
+    },
+    {
+      "name": "Dark Souls Remastered",
+      "type": "fixed",
+      "steam_appid": 570940,
+      "cover": "https://images.weserv.nl/?url=cdn.cloudflare.steamstatic.com/steam/apps/570940/library_600x900_2x.jpg&precrop=true&cx=0&cy=175&cw=600&ch=620&w=600&h=620&fit=cover&output=jpg",
+      "logo": "https://cdn.cloudflare.steamstatic.com/steam/apps/570940/logo.png",
+      "fullbleed_art": "https://images.weserv.nl/?url=store-images.s-microsoft.com/image/apps.21855.69479559702140610.dad571dd-6b2c-42a6-be9e-fd11d891d66c.e16a97f5-c50d-4fe7-91fd-1ed4a19aaca7&precrop=true&cx=5&cy=188&cw=1440&ch=810&w=1280&h=720&output=jpg",
+      "notes": "library_hero_2x da 404; el resto de rutas clasicas de Steam si responden. PORTADA A SANGRE: el arte bueno es el SuperHeroArt 1920x1080 del catalogo de Xbox (bigId BS18VCF4NLQ9), mismo key art del Caballero Elegido pero con el encuadre completo (arbol, cuervo y hoguera entera) y sin titulo. El precrop cx=5 cy=188 cw=1440 lo deja a la derecha (x=0.66) y libera el arbol para la columna, que va a la IZQUIERDA; de 1440 a 1280 es reduccion, no ampliacion. Descartado library_hero.jpg de Steam: 1920x620, el recorte 16:9 se queda en 1102 de ancho y sube a 1280 (upscale 1.16x, se ve blando). page.bg.jpg 1438x810 es 16:9 exacto pero con el sujeto centrado y sin ancho de sobra para desplazar la ventana. weserv SI acepta store-images si no se le pasa fit=cover. Logo 640x360 ratio 1.78: usado 440x247.5 en (15, 292) con el gancho en dos lineas a 62 px. La cover 600x900 lleva el titulo impreso arriba: el precrop a cy=175 lo saca y deja al Caballero Elegido entero con la hoguera. Logo 640x360 blanco sobre transparente, ratio 1.78 y con padding arriba y abajo, asi que entra tal cual en la caja de 510x286.9 en (205, 700) sin pisar el #N."
+    },
+    {
+      "name": "Grand Theft Auto VI",
+      "type": "fixed",
+      "steam_appid": null,
+      "cover": "https://store-images.s-microsoft.com/image/apps.182.14542422611289128.2df5f2de-8c5b-4180-adca-60031b66133a.ebf16897-415f-430c-8b57-c4cebc0b424d",
+      "logo": "https://images.weserv.nl/?url=www.rockstargames.com/VI/_next/static/media/poster_logo.0m-7c805zusl7.png&precrop=true&cx=777&cy=448&cw=880&ch=681&output=png",
+      "band_art": "https://store-images.s-microsoft.com/image/apps.38523.14542422611289128.3b031337-27f7-4c9c-b048-a91f557bda40.67ebe180-f05d-4351-b574-d94b366e0d02",
+      "fullbleed_art": "https://store-images.s-microsoft.com/image/apps.38523.14542422611289128.3b031337-27f7-4c9c-b048-a91f557bda40.67ebe180-f05d-4351-b574-d94b366e0d02",
+      "notes": "Salio el 19-11-2026 en PS5 y Xbox Series. No esta en Steam: el arte sale del catalogo de Xbox, bigId 9P3H4968GRSM en displaycatalog.mp.microsoft.com. El SuperHeroArt 3840x2160 es 16:9 exacto y es EL arte para portada a sangre: Jason y Lucia a la derecha, el 39% izquierdo es playa y skyline, hueco limpio para gancho y logo. El parametro fit=cover de weserv no vale en store-images (da 'Error occured'): pedir la URL cruda. El logo oficial vive en la web de Rockstar como poster_logo.png 2560x1440 con padding transparente enorme; el contenido real es bbox 777,448 880x681, ratio 1.292, y el precrop de weserv lo deja limpio."
     },
     {
       "name": "Pokemon Legends Z-A",

@@ -44,6 +44,7 @@ plantilla.
 | Archivo | Que hay |
 |---|---|
 | `SKILL.md` | El flujo y las reglas de contenido. Es lo que Claude lee siempre |
+| `reference/description.md` | Plantilla de descripcion de YouTube y reglas de capitulos |
 | `reference/layout.md` | Geometria de los huecos y tamaños que funcionan |
 | `reference/asset-sources.md` | De donde sacar covers, logos y arte de temporada |
 | `reference/canva-api.md` | Orden de llamadas, operaciones y trampas |

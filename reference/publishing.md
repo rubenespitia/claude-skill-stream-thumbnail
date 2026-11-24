@@ -36,6 +36,10 @@ buscar un gemelo que no existe.
   seguro que reescribir un titulo con emojis.
 - Al acabar en `#algo` se abre el desplegable de hashtags sugeridos: cerrar con `Escape` antes
   de guardar.
+- **Enfocar el campo por `ref`, no por coordenada.** Un clic en las coordenadas del titulo puede
+  no enfocar nada: lo que se teclee despues se pierde sin error y el titulo queda igual. Sacar
+  el `ref` del textbox con `find` y clicar sobre el. Despues de teclear, releer el campo antes
+  de guardar.
 
 ## 2. Miniatura
 
@@ -100,8 +104,16 @@ nueva.
 
 ## 7. Guardar y verificar
 
-Guardar y esperar el aviso *Se han guardado los cambios*. Despues **recargar la pagina de
-detalles** y releer los campos:
+**El boton Guardar necesita dos clics si vienes de escribir en un campo.** El primero solo
+retira el foco del campo y no guarda nada: el boton sigue activo y, si se intenta navegar, salta
+el dialogo nativo de *"¿Salir del sitio?"* que bloquea la sesion del navegador. Dar el segundo
+clic, esperar un par de segundos y comprobar que aparece el aviso:
+
+```js
+document.body.innerText.includes('Se han guardado los cambios')
+```
+
+Despues **recargar la pagina de detalles** y releer los campos:
 
 ```js
 const walk=(r,out)=>{r.querySelectorAll('*').forEach(e=>{if(e.getAttribute&&e.getAttribute('contenteditable')==='true')out.push(e);if(e.shadowRoot)walk(e.shadowRoot,out);});return out;};
